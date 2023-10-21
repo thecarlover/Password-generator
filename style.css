@@ -1,0 +1,178 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+input[type="range"] {
+    flex: 1;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.strength-bar-container {
+    margin-top: 20px;
+}
+
+.strength-bar {
+    height: 10px;
+    background: linear-gradient(90deg, #4CAF50 0%, #ff5722 100%);
+    border-radius: 5px;
+}
+
+/* Additional styles for a modern look */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"], input[type="range"], button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.glowing-text {
+    animation: glow 1.5s linear infinite;
+    text-shadow: 0 0 10px gold, 0 0 20px #0f0, 0 0 30px #f00;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px red, 0 0 20px #0f0, 0 0 30px #f00;
+    }
+    50% {
+        text-shadow: 0 0 20px goldenrod, 0 0 30px #0f0, 0 0 40px #f00;
+    }
+    100% {
+        text-shadow: 0 0 10px rebeccapurple, 0 0 20px #0f0, 0 0 30px #f00;
+    }
+}
+
+
+
+.character {
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    animation: moveCharacter 5s linear infinite;
+}
+
+.smiley {
+    width: 80px;
+    height: 80px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.left-eye,
+.right-eye {
+    background-color: #000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+}
+
+.left-eye {
+    left: 20px;
+}
+
+.right-eye {
+    right: 20px;
+}
+
+.mouth {
+    width: 40px;
+    height: 10px;
+    background: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #000;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+}
+
+@keyframes moveCharacter {
+    0% {
+        left: -20%;
+    }
+    50% {
+        left: 120%;
+    }
+    100% {
+        left: -20%;
+    }
+}
+/* ... Your existing CSS ... */
